@@ -1,0 +1,9 @@
+{
+  "name": "balanced-by-elizabeth-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Balanced by Elizabeth — static marketing site with a Vercel serverless contact form.",
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}
