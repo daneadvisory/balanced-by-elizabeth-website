@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Balanced by Elizabeth Nutrition Counseling</title>
+<meta name="description" content="Get in touch with Balanced by Elizabeth to start your nutrition counseling journey for hormone health, fertility, weight loss, or PCOS support.">
+<meta property="og:title" content="Contact — Balanced by Elizabeth">
+<meta property="og:description" content="Get in touch with Balanced by Elizabeth to start your nutrition counseling journey for hormone health, fertility, weight loss, or PCOS support.">
+<meta property="og:image" content="assets/logo.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="brand"><img src="assets/logo.png" alt="Balanced by Elizabeth logo"> Balanced by Elizabeth</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="">Home</a>
+        <a href="about.html" class="">About</a>
+        <a href="services.html" class="">Services</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="script">Contact</span>
+      <h1>Let's work together</h1>
+      <p class="lead">Tell me a bit about what's going on and what you're hoping to work on. I'll follow up to find the best next step, whether that's booking your free consultation or answering a few questions first.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0; padding-bottom:0;">
+    <div class="wrap">
+      <div class="schedule-cta">
+        <div>
+          <h3>Your first consultation is free</h3>
+          <p>A no-obligation conversation about your health history, symptoms, and goals — so we can figure out the right starting point together.</p>
+        </div>
+        <a href="mailto:elizabethwellness00@gmail.com?subject=Free%20Consultation%20Request" class="btn btn-primary">Schedule Your Free Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap two-col">
+      <form class="form-grid" id="contactForm" novalidate>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="full">
+          <label for="interest">What are you interested in?</label>
+          <select id="interest" name="interest">
+            <option>Hormone Health</option>
+            <option>Fertility Nutrition</option>
+            <option>Weight Loss</option>
+            <option>PCOS &amp; Metabolic Health</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Share a bit about what you're looking for support with."></textarea>
+        </div>
+        <div class="full">
+          <button type="submit" class="btn btn-primary" id="contactSubmit">Send Message</button>
+        </div>
+        <div class="full" id="formStatus" role="status" aria-live="polite" style="display:none;"></div>
+      </form>
+      <div>
+        <h3>Reach out directly</h3>
+        <p>elizabethwellness00@gmail.com<br>Virtual services only</p>
+        <div class="social-line" style="margin-top:16px;">
+          <a href="https://instagram.com/balanced.by.elizabeth_" target="_blank" rel="noopener" style="color:var(--sage-deep); font-weight:500;">@balanced.by.elizabeth_ on Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="brand"><img src="assets/logo.png" alt="Balanced by Elizabeth logo"> Balanced by Elizabeth</div>
+          <p style="color:rgba(255,255,255,0.6); font-size:0.92rem; max-width:32ch;">Evidence-based nutrition counseling for hormone health, fertility, and sustainable weight loss.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div>
+          <h4>Focus Areas</h4>
+          <a href="services.html#hormone-health">Hormone &amp; Metabolic Health</a>
+          <a href="services.html#fertility">Fertility Nutrition</a>
+          <a href="services.html#weight-loss">Weight Loss</a>
+        </div>
+        <div>
+          <h4>Get In Touch</h4>
+          <a href="contact.html">Contact / Book a Free Consultation</a>
+          <a href="mailto:elizabethwellness00@gmail.com">elizabethwellness00@gmail.com</a>
+          <a href="https://instagram.com/balanced.by.elizabeth_" target="_blank" rel="noopener">@balanced.by.elizabeth_</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Balanced by Elizabeth Nutrition Counseling, LLC. All rights reserved.</span>
+        <span>MS, RDN, CDN &middot; Certified in Fertility Nutrition &middot; Weight Loss Specialty &middot; balancedbyelizabeth.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
+    }
+
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('contactSubmit');
+
+    function showStatus(message, isError) {
+      formStatus.textContent = message;
+      formStatus.style.display = 'block';
+      formStatus.style.padding = '14px 16px';
+      formStatus.style.borderRadius = '8px';
+      formStatus.style.marginBottom = '4px';
+      if (isError) {
+        formStatus.style.background = '#fbeceb';
+        formStatus.style.color = '#8a3b34';
+      } else {
+        formStatus.style.background = '#eef3ec';
+        formStatus.style.color = 'var(--sage-deep, #3c5a45)';
+      }
+    }
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const interest = document.getElementById('interest').value;
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email) {
+          showStatus('Please fill in your name and email.', true);
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+        formStatus.style.display = 'none';
+
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, interest, message }),
+          });
+
+          if (!res.ok) {
+            const data = await res.json().catch(() => ({}));
+            throw new Error(data.error || 'Something went wrong. Please try again.');
+          }
+
+          contactForm.reset();
+          Array.from(contactForm.children).forEach((el) => {
+            if (el.id !== 'formStatus') el.style.display = 'none';
+          });
+          showStatus("Thank you — I've received your message and will follow up soon.", false);
+        } catch (err) {
+          showStatus(err.message || 'Something went wrong. Please try again, or email elizabethwellness00@gmail.com directly.', true);
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
